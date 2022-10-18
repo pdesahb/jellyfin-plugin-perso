@@ -4,6 +4,18 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Jellyfin.Controller" Version="10.8.3" />
+		<PackageReference Include="Jellyfin.Controller" Version="10.*-*" />
 	</ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Emby.Naming">
+      <HintPath>../../jellyfin/Emby.Naming/bin/Debug/net6.0/Emby.Naming.dll</HintPath>
+    </Reference>
+    <Reference Include="Emby.Server.Implementations">
+      <HintPath>../../jellyfin/Emby.Server.Implementations/bin/Debug/net6.0/Emby.Server.Implementations.dll</HintPath>
+    </Reference>
+    <Reference Include="MediaBrowser.Controller">
+      <HintPath>../../jellyfin/MediaBrowser.Controller/bin/Debug/net6.0/MediaBrowser.Controller.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 </Project>

@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text.RegularExpressions;
-using Jellyfin.Plugin.Resolver.Api;
 using Emby.Naming.Common;
-using Emby.Server.Implementations.Library.Resolvers.Movies
-using Emby.Server.Implementations.Library.Resolvers.TV
+using Emby.Server.Implementations.Library.Resolvers.Movies;
+using Emby.Server.Implementations.Library.Resolvers.TV;
+using MediaBrowser.Controller.Resolvers;
+using MediaBrowser.Controller.Drawing;
 using Microsoft.Extensions.Logging;
 
 
@@ -37,10 +33,10 @@ namespace Jellyfin.Plugin.Resolver.Resolver
 		public override ResolverPriority Priority => ResolverPriority.Plugin;
 
         public PersonalMovieResolver(IImageProcessor imageProcessor, ILogger<MovieResolver> logger, NamingOptions namingOptions)
-            : base(logger, new PersonalNamingOptions())
-        {
-            _imageProcessor = imageProcessor;
-        }
+            : base(imageProcessor, logger, new PersonalNamingOptions())
+            {
+
+            }
 	}
 
 
@@ -48,11 +44,11 @@ namespace Jellyfin.Plugin.Resolver.Resolver
 	{
 		public override ResolverPriority Priority => ResolverPriority.Plugin;
 
-        public PersonalEpisodeResolver(IImageProcessor imageProcessor, ILogger<MovieResolver> logger, NamingOptions namingOptions)
+        public PersonalEpisodeResolver(ILogger<EpisodeResolver> logger, NamingOptions namingOptions)
             : base(logger, new PersonalNamingOptions())
-        {
-            _imageProcessor = imageProcessor;
-        }
+            {
+
+            }
 	}
 
 }
