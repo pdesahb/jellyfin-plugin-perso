@@ -35,7 +35,7 @@ namespace Jellyfin.Plugin.Resolver.Resolver
         public PersonalMovieResolver(IImageProcessor imageProcessor, ILogger<MovieResolver> logger, NamingOptions namingOptions)
             : base(imageProcessor, logger, new PersonalNamingOptions())
             {
-
+                _logger.LogWarning("Instanciated PersonalMovieResolver with {options}", NamingOptions);
             }
 	}
 
@@ -47,8 +47,7 @@ namespace Jellyfin.Plugin.Resolver.Resolver
         public PersonalEpisodeResolver(ILogger<EpisodeResolver> logger, NamingOptions namingOptions)
             : base(logger, new PersonalNamingOptions())
             {
-
+                _logger.LogWarning("Instanciated PersonalEpisodeResolver with {options}", NamingOptions);
             }
 	}
-
 }

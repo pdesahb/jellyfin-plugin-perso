@@ -9,13 +9,13 @@
 
   <ItemGroup>
     <Reference Include="Emby.Naming">
-      <HintPath>../../jellyfin/Emby.Naming/bin/Debug/net6.0/Emby.Naming.dll</HintPath>
+      <HintPath>../jellyfin/bin/Emby.Naming.dll</HintPath>
     </Reference>
     <Reference Include="Emby.Server.Implementations">
-      <HintPath>../../jellyfin/Emby.Server.Implementations/bin/Debug/net6.0/Emby.Server.Implementations.dll</HintPath>
+      <HintPath>../jellyfin/bin/Emby.Server.Implementations.dll</HintPath>
     </Reference>
     <Reference Include="MediaBrowser.Controller">
-      <HintPath>../../jellyfin/MediaBrowser.Controller/bin/Debug/net6.0/MediaBrowser.Controller.dll</HintPath>
+      <HintPath>../jellyfin/bin/MediaBrowser.Controller.dll</HintPath>
     </Reference>
   </ItemGroup>
 </Project>
